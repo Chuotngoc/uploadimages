@@ -10,10 +10,10 @@ if(!isset($_REQUEST['id'])){
 if(isset($_POST['del'])){
     $id = REQUEST('id');
     $sql = "DELETE FROM `sanpham` WHERE id = $id";
-    excuter_query($sql);
+    Excuter($sql);
 }
 $id = REQUEST('id');
-$rows =_select_query("select * from `sanpham` WHERE id = $id");
+$rows =Select("select * from `sanpham` WHERE id = $id");
 if(count($rows)<1){
     header("Location:hinhanh.php");
 }
@@ -23,7 +23,7 @@ if(count($rows)<1){
 <div class="container col-sm-6 col-sm-offset-3">
     <form role="form" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $rows[0]['id']?>">
-        <h4>Bạn có muốn xóa sản phẩm  '<?php echo $rows[0]['ten'] ?>'</h4>
+        <h4>Bạn có muốn xóa sản phẩm <i>'<?php echo $rows[0]['ten'] ?>'</i> </h4>
         <button type="submit" class="btn btn-default col-sm-2 col-sm-offset-3" name="del">Xoá</button>
         <a href="danhmuc.php" class="btn btn-danger col-sm-2 col-sm-offset-1">Trở lại</a>
     </form>

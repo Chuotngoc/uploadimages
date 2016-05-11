@@ -6,7 +6,7 @@ if(isset($_REQUEST["upload"])){
     $cate = REQUEST("cate");
     $url = uploadIMG();
     if($url != null){
-        $sql = "Insert into `images`(`name`,`category`,`url`) VALUES('$name',$cate,'$url')";
+        $sql = "Insert into `images`(`name`,`category_id`,`url`) VALUES('$name',$cate,'$url')";
         if(Excuter($sql)){
             $msgs[] = "Upload ảnh thành công!";
         }else {

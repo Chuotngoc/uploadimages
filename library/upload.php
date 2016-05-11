@@ -12,7 +12,7 @@ $categores = Select("select * from `category`");
 
         <!-- Modal content-->
         <div class="modal-content">
-            <form role="form" method="post">
+            <form role="form" method="post" enctype="multipart/form-data">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Upload Hình ảnh</h4>

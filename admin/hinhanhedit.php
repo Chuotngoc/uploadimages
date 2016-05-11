@@ -3,7 +3,7 @@ $page = 3;
 include_once 'header.php';
 include_once LIBRARY.'io.php';
 include_once LIBRARY.'saveIMG.php';
-$rows_cate =_select_query("select * from `category`");
+$rows_cate =Select("select * from `category`");
 
 if(!isset($_REQUEST['id'])){
     header("Location:hinhan.php");
@@ -24,11 +24,11 @@ if(isset($_POST['edit'])){
     $danhmuc = REQUEST('danhmuc');
     $sql = "UPDATE `images` SET `ten`='$ten',`category_id`='$danhmuc' WHERE `id`=$id";
     //var_dump($sql);
-    excuter_query($sql);
+    Excuter($sql);
     //exit;
 }
 $id = REQUEST('id');
-$rows =_select_query("select * from `images` WHERE id = $id");
+$rows =Select("select * from `images` WHERE id = $id");
 if(count($rows)<1){
     header("Location:hinhanh.php");
 }
@@ -40,7 +40,7 @@ if(count($rows)<1){
         <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $rows[0]['id'] ?>">
         <div class="form-group">
             <label for="ten">Tên Hình ảnh:</label>
-            <input type="text" class="form-control" name="ten" id="ten"  value="<?php echo $rows[0]['ten'] ?>">
+            <input type="text" class="form-control" name="ten" id="ten"  value="<?php echo $rows[0]['name'] ?>">
         </div>
         <div class="form-group">
             <label for="anh">Danh mục:</label>

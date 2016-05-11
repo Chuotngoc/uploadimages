@@ -2,7 +2,7 @@
 $page = 3;
 include_once 'header.php';
 
-$rows =Select("select * from `images`");
+$rows =Select("select * from `viewimages`");
 ?>
 
 <div class="container">
@@ -22,7 +22,7 @@ $rows =Select("select * from `images`");
             <tr>
                 <td><?php echo $row['id'] ?></td>
                 <td><?php echo $row['name'] ?></td>
-                <td><?php echo $row['category_id'] ?></td>
+                <td><?php echo $row['category'] ?></td>
                 <td><a href="hinhanhedit.php?id=<?php echo $row['id'] ?>"><span class="glyphicon glyphicon-edit"></span></a></td>
                 <td><a href="hinhanhdel.php?id=<?php echo $row['id'] ?>"><span class="glyphicon glyphicon-remove"></span></a></td>
             </tr>
