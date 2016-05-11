@@ -6,8 +6,9 @@ define("user","root");
 define("pass","");
 
 define("ROOT",__DIR__);
-define("FOLDER","uploadimage");
-define("URL",ROOT."/".FOLDER);
+define("URL_ROOT",$_SERVER['HTTP_HOST']);
+define("FOLDER","uploadimages");
+define("URL","//".URL_ROOT."/".FOLDER);
 
 define("ADMIN",ROOT."/admin/");
 define("LIBRARY",ROOT."/library/");

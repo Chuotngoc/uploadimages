@@ -2,7 +2,7 @@
 include_once "config.php";
 include_once LIBRARY . "io.php";
 include_once LIBRARY . "login.php";
-
+include_once "database.php";
 
 if(!isset($title)){
     $title ="Upload ảnh";
@@ -30,9 +30,11 @@ if(!isset($title)){
             <?php if(!islogin()){ ?>
                 <a href="login.php" class="btn btn-default">Đăng nhập</a>
             <?php }else{ ?>
-                <a href="upload.php">Upload</a>
-                <a href="login.php?logout">Đăng xuất</a>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#myModal">Upload</a>
+                <a href="login.php?logout" class="btn alert-danger">Đăng xuất</a>
+                <?php include_once LIBRARY."upload.php"; ?>
             <?php }?>
         </ul>
     </div>
 </nav>
+<?php include_once "error.php"; ?>

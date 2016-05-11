@@ -1,13 +1,15 @@
 
 
 <?php
+include_once "config.php";
+include_once LIBRARY."io.php";
 include_once "database.php";
 include_once CODE."login.php";
 include_once "header.php";
 ?>
 <div class="container col-sm-4 col-sm-offset-4" style="margin-top: 100px">
     <?php include_once "error.php"; ?>
-    <form role="form">
+    <form role="form" method="post">
         <div class="form-group">
             <label for="name">Tên đăng nhập:</label>
             <input type="text" name="name" class="form-control" id="name">
