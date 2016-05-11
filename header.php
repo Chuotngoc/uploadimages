@@ -25,7 +25,17 @@ if(!isset($title)){
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php">Upload ảnh</a>
         </div>
-
+        <ul class="nav navbar-left  menu-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Khám Phá
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Submenu 1-1</a></li>
+                    <li><a href="#">Submenu 1-2</a></li>
+                    <li><a href="#">Submenu 1-3</a></li>
+                </ul>
+            </li>
+        </ul>
         <ul class="nav navbar-right menu-right">
             <?php if(!islogin()){ ?>
                 <a href="login.php" class="btn btn-default">Đăng nhập</a>

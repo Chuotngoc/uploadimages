@@ -7,26 +7,22 @@ $rows =Select("select * from `viewimages`");
 
 <div class="container">
     <h2> Hình ảnh</h2>
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Tên</th>
-            <th>Danh mục</th>
-            <th>Sửa</th>
-            <th>Xóa</th>
-        </tr>
-        </thead>
-        <tbody>
+    <div class="container">
         <?php foreach($rows as $row): ?>
-            <tr>
-                <td><?php echo $row['id'] ?></td>
-                <td><?php echo $row['name'] ?></td>
-                <td><?php echo $row['category'] ?></td>
-                <td><a href="hinhanhedit.php?id=<?php echo $row['id'] ?>"><span class="glyphicon glyphicon-edit"></span></a></td>
-                <td><a href="hinhanhdel.php?id=<?php echo $row['id'] ?>"><span class="glyphicon glyphicon-remove"></span></a></td>
-            </tr>
+            <div class="col-sm-3">
+                <div>
+                    <img src="<?php echo $row['url'] ?>" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                </div>
+                <div>
+                    <h4 class="text-center"><b><?php echo $row['name'] ?></b></h4>
+                    <p class="text-center">Danh mục: <i><?php echo $row['category'] ?></i></p>
+                </div>
+                <div class="control-view">
+                    <a href="hinhanhedit.php?id=<?php echo $row['id'] ?>"><span class="glyphicon glyphicon-edit"></span>Sửa</a>
+                    <a href="hinhanhdel.php?id=<?php echo $row['id'] ?>"><span class="glyphicon glyphicon-remove"></span>Xóa</a>
+                </div>
+            </div>
+
         <?php endforeach; ?>
-        </tbody>
-    </table>
+    </div>
 </div>
