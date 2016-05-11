@@ -1,4 +1,7 @@
 <?php
+include_once "config.php";
+include_once LIBRARY . "io.php";
+include_once LIBRARY . "login.php";
 
 
 if(!isset($title)){
@@ -16,7 +19,16 @@ if(!isset($title)){
     <link rel="stylesheet" href="public/css/public.css">
     <script src="public/js/public.js"></script>
 </head>
-<body>
+<body style="background-color: rgba(211, 245, 235, 0.59);">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php">Upload ảnh</a>
+        </div>
+        
+        <ul class="nav navbar-right menu-right">
 
-</body>
-</html>
+            <a href="login.php" class="btn btn-default">Đăng nhập</a>
+        </ul>
+    </div>
+</nav>

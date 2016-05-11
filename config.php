@@ -10,3 +10,4 @@ define("FOLDER","uploadimage");
 define("URL",ROOT."/".FOLDER);
 
 define("ADMIN",ROOT."/admin");
+define("LIBRARY",ROOT."/library/");

@@ -1,7 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Wind
- * Date: 11/05/2016
- * Time: 13:42
- */
+
+<?php include_once "header.php"; ?>
+
+<?php include_once "footer.php" ?>
