@@ -25,10 +25,14 @@ if(!isset($title)){
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php">Upload ảnh</a>
         </div>
-        
-        <ul class="nav navbar-right menu-right">
 
-            <a href="login.php" class="btn btn-default">Đăng nhập</a>
+        <ul class="nav navbar-right menu-right">
+            <?php if(!islogin()){ ?>
+                <a href="login.php" class="btn btn-default">Đăng nhập</a>
+            <?php }else{ ?>
+                <a href="upload.php">Upload</a>
+                <a href="login.php?logout">Đăng xuất</a>
+            <?php }?>
         </ul>
     </div>
 </nav>

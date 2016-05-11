@@ -1,7 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Wind
- * Date: 11/05/2016
- * Time: 13:59
- */
+
+
+function REQUEST($var){
+    return isset($_REQUEST[$var])? $_REQUEST[$var]: null;
+}
+
+function COOKIE($var){
+    return isset($_COOKIE[$var])? $_COOKIE[$var]: null;
+}
+
+function ALL(){
+    return $_REQUEST;
+}

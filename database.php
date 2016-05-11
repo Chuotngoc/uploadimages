@@ -12,7 +12,7 @@ function Select($sql){
     if ($result=mysqli_query($connect,$sql))
     {
         $rows = [];
-        while($row=mysqli_fetch_row($result)){
+        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
             $rows[] = $row;
         }
         return $rows;

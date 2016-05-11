@@ -9,5 +9,6 @@ define("ROOT",__DIR__);
 define("FOLDER","uploadimage");
 define("URL",ROOT."/".FOLDER);
 
-define("ADMIN",ROOT."/admin");
+define("ADMIN",ROOT."/admin/");
 define("LIBRARY",ROOT."/library/");
+define("CODE",ROOT."/code/");
